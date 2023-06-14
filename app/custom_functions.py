@@ -12,6 +12,17 @@ from xlwings import pro
 def hello(name):
     return f"Hello {name}!"
 
+@pro.func
+@pro.arg("value", doc="The value to be doubled")
+def doubleValue(value):
+    return value * 2
+
+@pro.func
+@pro.arg("value", doc="The value to be quadrupled")
+def quadValue(value):
+    return value * 4
+
+
 
 # SAMPLE 2: Numpy, Namespace, doc strings, dynamic arrays
 # This sample also shows how you set a namespace and add description to the
@@ -54,6 +65,15 @@ def correl(df):
     Set index and header to True if your dataset has labels
     """
     return df.corr()
+    
+
+@pro.func(namespace="pandas")
+@pro.arg("prices",  pd.DataFrame, index=True, header=True)
+@pro.ret( index=False, header=False)
+def new_cov_matrix(prices):
+    diffs = prices.diff().iloc[1:]
+    df = diffs.T.dot(diffs) / diffs.shape[0]
+    return pd.DataFrame(df)
 
 
 # SAMPLE 5: DateTime
