@@ -124,3 +124,6 @@ if __name__ == "__main__":
             this_dir.parent / "certs" / "localhost+2-key.pem",
         ),
     )
+
+# kill a port on mac
+# sudo lsof -i :8000

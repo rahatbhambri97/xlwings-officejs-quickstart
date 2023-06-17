@@ -1,5 +1,4 @@
 import datetime as dt
-
 import numpy as np
 import pandas as pd
 import xlwings as xw
@@ -21,6 +20,7 @@ def doubleValue(value):
 @pro.arg("value", doc="The value to be quadrupled")
 def quadValue(value):
     return value * 4
+
 
 
 
