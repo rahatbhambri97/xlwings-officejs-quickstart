@@ -3,7 +3,6 @@ dist/
 .DS_Store
 .parcel-cache/
 *.pyc
-*.pem
 .env
 .idea/
 
