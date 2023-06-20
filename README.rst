@@ -59,7 +59,7 @@ At the end of this quickstart, you'll have a working environment for local devel
 
       $ python app/server_fastapi.py 
       INFO:     Will watch for changes in these directories: ['/Users/fz/Dev/xlwings-officejs-quickstart']
-      INFO:     Uvicorn running on https://127.0.0.1:8000 (Press CTRL+C to quit)
+      INFO:     Uvicorn running on https://0.0.0.0:8000 (Press CTRL+C to quit)
       INFO:     Started reloader process [56708] using WatchFiles
       INFO:     Started server process [56714]
       INFO:     Waiting for application startup.
